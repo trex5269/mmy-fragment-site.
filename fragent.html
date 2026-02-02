@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fragment Ryazan</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: monospace;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .symbols {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 40px;
+            color: #555;
+            word-wrap: break-word;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 20px 0;
+            letter-spacing: 8px;
+            color: #fff;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            letter-spacing: 3px;
+            color: #aaa;
+        }
+        h2 {
+            font-size: 1.8em;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .contact {
+            background-color: #111;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px auto;
+            display: inline-block;
+        }
+        .info {
+            text-align: left;
+            margin-top: 30px;
+            padding-left: 20px;
+            border-left: 2px solid #333;
+        }
+        .section {
+            margin: 30px 0;
+            text-align: left;
+        }
+        .hint {
+            margin-top: 60px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="symbols">
+            ✢ ✣ ✢ ✣ ✦ ✤ ✦ ✦ ✦ ✦ ✢ ✤ ✤ ✢ ✢ ✦ ✦ ❄ ✦ ✣ ✤ ✢ ❄ ✤ ✢
+        </div>
+        
+        <h1>Fragment</h1>
+        <div class="subtitle">PREMIUM EDITION</div>
+        
+        <div class="hint">Листайте вниз</div>
+        
+        <div class="symbols" style="margin-top: 60px;">
+            ✦ ✢ ✣ ✦ ✦ ✤ ❄ ❄ ✣ ✢ ✢ ✦ ✣ ✦ ✦ ✢ ❄ ✦ ✣ ✦
+        </div>
+        
+        <h2>Fragment Ryazan</h2>
+        
+        <div class="section">
+            <h3>Контактная информация</h3>
+            <div class="contact">
+                Связь в Telegram - @speak
+            </div>
+            <p>Максим</p>
+            <p>11.07.2008</p>
+        </div>
+        
+        <div class="section">
+            <h3>Скуплю NFT</h3>
+            <p>Приобрету NFT и Telegram подарки по цене ниже рыночной за рубли или криптовалюту</p>
+        </div>
+        
+        <div class="section">
+            <h3>Куплю крипту</h3>
+            <p>Скупаю TON и USDT. Для получения актуального курса напишите мне в личные сообщения.</p>
+            <p>Минимальная сумма: от 500 рублей</p>
+            <p>Максимальная сумма: до 30 000 рублей</p>
+        </div>
+        
+        <div class="section">
+            <h3>Ищу</h3>
+            <ul>
+                <li>Людей, имеющих каналы на 200+ участников</li>
+                <li>Карты Сбербанка, Т-Банка</li>
+            </ul>
+        </div>
+        
+        <div class="hint" style="margin-top: 80px;">
+            Fragment Ryazan
+        </div>
+    </div>
+
+    <script>
+        // Простой скрипт для анимации появления символов
+        document.addEventListener('DOMContentLoaded', function() {
+            const symbols = document.querySelectorAll('.symbols');
+            symbols.forEach(block => {
+                const text = block.textContent;
+                block.textContent = '';
+                
+                for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                        block.textContent += text[i];
+                    }, i * 30);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
