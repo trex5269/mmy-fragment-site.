@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+    font-family: 'JetBrains Mono', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(28, 58, 173, 0.05) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(200, 80, 192, 0.05) 0%, transparent 20%);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.symbols {
+    font-size: 24px;
+    color: #6366f1;
+    text-align: center;
+    margin: 40px 0;
+    opacity: 0.7;
+    letter-spacing: 4px;
+    animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+}
+
+.title {
+    font-size: 72px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 15px;
+    margin: 40px 0 20px;
+    color: transparent;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shimmer 3s infinite;
+    text-transform: uppercase;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.subtitle {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 8px;
+    color: #a5a5a5;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.scroll-hint {
+    text-align: center;
+    color: #6366f1;
+    font-size: 14px;
+    margin: 60px 0;
+    animation: bounce 2s infinite;
+    opacity: 0.6;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.section-title {
+    font-size: 32px;
+    margin: 60px 0 40px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    margin: 10px auto;
+}
+
+.section {
+    background: rgba(30, 30, 30, 0.7);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 0;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.section h3 {
+    color: #6366f1;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #6366f1;
+    padding-left: 15px;
+}
+
+.contact-box {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid #6366f1;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.telegram-link {
+    font-size: 18px;
+    color: #fff;
+}
+
+.telegram-link a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.telegram-link a:hover {
+    color: #8b5cf6;
+    text-decoration: underline;
+}
+
+.info-line {
+    margin: 10px 0;
+    color: #a5a5a5;
+    font-size: 16px;
+}
+
+.price-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(30, 30, 30, 0.5);
+    border-radius: 8px;
+}
+
+.price-line {
+    margin: 8px 0;
+    color: #e5e5e5;
+}
+
+.list {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #e5e5e5;
+}
+
+.list li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: #6366f1;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 80px;
+    color: #666;
+    font-size: 14px;
+    padding: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Анимации появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
